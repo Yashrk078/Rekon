@@ -90,6 +90,7 @@ as its core component.
 
 - To Run the script, Just use ``` > python3 main.py  ``` and relax!
 
+- Keep in mind that you need to write the Path for amass config file (If any) and for S3Scanner.py
 
 ### Thank You
 
