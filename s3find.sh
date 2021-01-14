@@ -8,7 +8,7 @@ do
 done
 
 s3(){
-python3 ~/Desktop/Neutron/S3Scanner/s3scanner.py ~/Desktop/Neutron/NeutronSec/$domn/domains.txt -o ~/Desktop/Neutron/NeutronSec/$domn/s3Scan.txt
+python3 ~/path/to/S3Scanner/s3scanner.py ~/path/to/NeutronSec/$domn/domains.txt -o ~/path/to/NeutronSec/$domn/s3Scan.txt
 }
 s3
 
