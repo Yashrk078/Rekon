@@ -105,5 +105,5 @@ Possibility of Replacing Nmap with any other fast Port Scanner.
 
 Active BruteForcing of Subdomains (Permutations) for VPS.
 
-Adding more features like Checking sor SSTI, SSRF, etc.
+Adding more features like Checking SSTI, SSRF, etc.
 
