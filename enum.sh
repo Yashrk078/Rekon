@@ -3,7 +3,7 @@ while getopts d: flag
 do
 	case "${flag}" in
 		d) domain=${OPTARG};;
-		*) echo "Invalid Hai Bhaimyaa :/"
+		*) echo " :/"
 	esac
 done
 mkdir -p $domain/
@@ -17,7 +17,7 @@ assetfinder -subs-only $domain | tee $domain/ast_fin.txt
 
 #Amass mfs
 
-amass enum -passive -d $domain -o $domain/ams_pas.txt -config /root/Desktop/Neutron/tempo/Reconer/./myconfig.ini
+amass enum -passive -d $domain -o $domain/ams_pas.txt -config /path/to/./config.ini
 
 #remove dupes :)
 
