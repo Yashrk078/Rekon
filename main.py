@@ -1,12 +1,4 @@
 import subprocess
-print("""
- _   _            _                    ____            
-| \ | | ___ _   _| |_ _ __ ___  _ __  / ___|  ___  ___ 
-|  \| |/ _ \ | | | __| '__/ _ \| '_ \ \___ \ / _ \/ __|
-| |\  |  __/ |_| | |_| | | (_) | | | |____) |  __/ (__ 
-|_| \_|\___|\__,_|\__|_|  \___/|_| |_|_____/ \___|\___|
-		        --v0.1--
-""")
 
 class bcolors:
     HEADER = '\033[95m'
@@ -18,6 +10,18 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
+print(bcolors.OKCYAN+bcolors.UNDERLINE+""" 
+███╗   ██╗███████╗██╗   ██╗████████╗██████╗  ██████╗ ███╗   ██╗███████╗███████╗ ██████╗
+████╗  ██║██╔════╝██║   ██║╚══██╔══╝██╔══██╗██╔═══██╗████╗  ██║██╔════╝██╔════╝██╔════╝
+██╔██╗ ██║█████╗  ██║   ██║   ██║   ██████╔╝██║   ██║██╔██╗ ██║███████╗█████╗  ██║
+██║╚██╗██║██╔══╝  ██║   ██║   ██║   ██╔══██╗██║   ██║██║╚██╗██║╚════██║██╔══╝  ██║
+██║ ╚████║███████╗╚██████╔╝   ██║   ██║  ██║╚██████╔╝██║ ╚████║███████║███████╗╚██████╗
+╚═╝  ╚═══╝╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═════╝ 
+
+                        --v0.2-- 
+"""+bcolors.ENDC) 
+
 
 dom = input(bcolors.BOLD+bcolors.FAIL+"Enter Domain:-)"+bcolors.ENDC)
 print(bcolors.BOLD+bcolors.OKBLUE+"Now Starting"+bcolors.ENDC)
@@ -38,20 +42,42 @@ print(bcolors.BOLD+bcolors.OKCYAN+"Creating a Custom Wordlist for you :]"+bcolor
 subprocess.call("./wordlist.sh -d "+dom, shell=True)
 print(bcolors.BOLD+bcolors.OKCYAN+"Testing for PUT method"+bcolors.ENDC)
 subprocess.call("./puttest.sh "+dom, shell=True)
-x = input(bcolors.BOLD+bcolors.WARNING+"Perform Screenshots? (y/n): "+bcolors.ENDC)
+x = input(bcolors.BOLD+bcolors.WARNING+"Perform Screenshots? (y/n): "+bcolors.ENDC).lower()
 if x == "y":
 	subprocess.call("./eyewitns.sh -d "+dom, shell=True)
 else:
 	exit 
-y = input(bcolors.BOLD+bcolors.WARNING+"Perform NMap ? (y/n): "+bcolors.ENDC)
+y = input(bcolors.BOLD+bcolors.WARNING+"Perform NMap ? (y/n): "+bcolors.ENDC).lower()
 if y == "y":
 	subprocess.call("./nmap.sh -d "+dom, shell=True)
 else:
 	exit
-z = input(bcolors.BOLD+bcolors.WARNING+"Perform Nuclei? (y/n): "+bcolors.ENDC)
+z = input(bcolors.BOLD+bcolors.WARNING+"Perform Nuclei? (y/n): "+bcolors.ENDC).lower()
 if z == "y":
 	subprocess.call("./nuclei.sh -d "+dom, shell=True)
 else:
 	exit
+
+print(''' 
+         ▄              ▄  
+        ▌▒█           ▄▀▒▌  
+        ▌▒▒█        ▄▀▒▒▒▐
+       ▐▄█▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐ 
+     ▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐  
+   ▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌   
+  ▐▒▒▒▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▌ 
+  ▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+ ▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌ 
+ ▌░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌ 
+▌▒▒▒▄██▄▒▒▒▒▒▒▒▒░░░░░░░░▒▒▒▐ 
+▐▒▒▐▄█▄█▌▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
+▐▒▒▐▀▐▀▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▐ 
+ ▌▒▒▀▄▄▄▄▄▄▀▒▒▒▒▒▒▒░▒░▒░▒▒▒▌ 
+ ▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▄▒▒▐ 
+  ▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▄▒▒▒▒▌
+    ▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
+      ▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀
+         ▀▀▀▀▀▀▀▀▀▀▀▀          
+''')
 print("\n"+bcolors.BOLD+bcolors.OKGREEN+"--------------------------------------"+bcolors.ENDC+"\n"+bcolors.BOLD+bcolors.FAIL+"Script Ended, but not your Hamcking :)"+bcolors.ENDC)
 
