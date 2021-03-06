@@ -17,7 +17,7 @@ assetfinder -subs-only $domain | tee $domain/ast_fin.txt
 
 #Amass mfs
 
-amass enum -passive -d $domain -o $domain/ams_pas.txt -config /path/to/./config.ini
+amass enum -passive -d $domain -o $domain/ams_pas.txt #-config /path/to/./config.ini
 
 #remove dupes :)
 
