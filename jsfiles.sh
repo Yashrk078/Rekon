@@ -3,7 +3,7 @@ while getopts d: flag
 do
 	case "${flag}" in
 		d) domn=${OPTARG};;
-		*) echo "Invalid Hai Bhaimyaa :/"
+		*) echo "Invalid "
 	esac
 done
 mkdir $domn/scripts
